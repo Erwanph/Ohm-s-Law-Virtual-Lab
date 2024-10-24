@@ -74,7 +74,7 @@ function checkConditionsAndToggleLight() {
         if ((isSerialSlotFilled1 && isSerialSlotFilled2) || (isParallelSlotFilled1 && isParallelSlotFilled2)) {
             const lightBulbContainers = document.querySelectorAll('.serial-drop-area1, .serial-drop-area2, .parallel-drop-area1, .parallel-drop-area2');
             lightBulbContainers.forEach(container => {
-                c(container, 'on');
+                changeLightBulbImage(container, 'on');
             });
             calculateCurrent();
         } else {
@@ -179,5 +179,5 @@ function swapPage(clicked) {
     document.getElementById('switch').checked = false;
     isSwitchOn = false;
     turnOffLightBulbs();
-    document.getElementById("resultArus").textContent = "0";
+    document.getElementById("resultArus").textContent = "0"; 
 }
