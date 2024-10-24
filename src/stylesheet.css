@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6A9C89;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+nav {
+    height: 75px;
+    background-color: #16423C90;
+    display: flex;
+    align-items: center;
+}
+
+.left-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-logo{
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img {
+    height: 50px;
+    width: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 28px;
+}
+
+nav .link-to-page a:hover {
+    background-color: #16423C90;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #C4DAD2;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #16423C;
+    padding: 20px;
+    gap: 20px;
+}
+
+.upper-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.left-section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    text-align: justify;
+    padding: 20px 20px 5px 20px;
+}
+
+.formula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.right-section {
+    margin-right: 6px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section img {
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 275px;
+    border-radius: 10%;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container iframe {
+    width: 600px; /* Make iframe responsive */
+    height: 400px; /* Maintain aspect ratio */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+footer {
+    height: 100px;
+    background-color: #16423C;
+    padding: 10px;
+    text-align: center;
+    color: #E9EFEC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p {
+    font-size: 18px;
+    line-height: normal;
+}
+
+.right-section p{
+    font-size: 1.1em;
+}
+
+
+
+/* Ipad */
+@media (max-width: 1024px) {
+    nav a {
+        padding: 10px;
+    }
+
+    .upper-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .left-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formula img {
+        max-width: 500px;
+        padding: 5px;
+    }
+
+    .right-section {
+        width: 80%;
+    }
+
+    .right-section img {
+        max-width: 275px;
+        padding-bottom: 8px;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Make iframe fully responsive */
+        max-width: 600px;
+        max-height: 400px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+
+    footer {
+        font-size: 18px;
+    }
+
+    .right-section p {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 820px) {
+    nav a {
+        padding: 10px;
+    }
+
+    .upper-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .left-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formula img {
+        max-width: 350px;
+        padding: 6px;
+    }
+
+    .right-section {
+        width: 80%;
+    }
+
+    .right-section img {
+        max-width: 200px;
+        padding-bottom: 10px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        max-width: 450px;
+        max-height: 300px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+
+    .right-section p {
+        font-size: 1.2em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+    nav a {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .upper-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .left-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formula img {
+        max-width: 150px;
+        padding: 5px;
+    }
+
+    .right-section {
+        width: 80%;
+    }
+
+    .right-section img {
+        max-width: 150px;
+        padding-bottom: 8px;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Make iframe fully responsive */
+        max-width: 300px;
+        max-height: 200px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    .right-section p {
+        font-size: 0.8em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 376px) {
+    nav a {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column; /* Change to column */
+    }
+
+
+    .upper-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formula img {
+        max-width: 130px;
+        padding: 4px;
+    }
+
+    .right-section {
+        width: 80%;
+    }
+
+    .right-section img {
+        max-width: 130px;
+        padding-bottom: 8px;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Make iframe fully responsive */
+        max-width: 200px;
+        max-height: 140px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.7em;
+        line-height: 1.4;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .right-section p {
+        font-size: 0.7em;
+    }
+}

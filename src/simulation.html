@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Erwan's Virtual Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet2.css">
+    <script src="../src/script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="left-logo">
+            <a href="index.html">
+                <img src="../img/Logo.png" alt="Logo" width="60px">
+            </a>    
+        </div>
+        <div class="link-to-page">
+            <a href="index.html">Hukum Ohm</a>
+            <a href="simulation.html">Simulasi</a>
+        </div>
+        <div class="right-logo">
+            <a href="index.html">
+                <img src="../img/Logo.png" alt="Logo" width="60px">
+            </a>    
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-button">
+            <button id="serial-btn" class="active" onclick="swapPage('serial')">Rangkaian Seri</button>
+            <button id="parallel-btn" onclick="swapPage('parallel')">Rangkaian Paralel</button>
+        </div>        
+        <div class="content-container">
+            <div class="left-section">
+                <h1>Simulasi Rangkaian</h1>
+                <div class="item-table">
+                    <h2>Lorem Ipsum</h2>
+                    <div class="table-top">
+                        <img src="../img/resistor.png" alt="Resistor" class="draggable" id="resistor" ondragstart="drag(event)">
+                    </div>
+                    <div class="table-bottom">
+                        <img src="../img/lightbulb-off.png" alt="Light Bulb" class="draggable" id="lightBulb" ondragstart="drag(event)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mid-section">
+                <input type="checkbox" id="switch" class="checkbox" />            
+                <label for="switch" class="toggle">
+                    <p>ON &nbsp;&nbsp; OFF</p>
+                </label>
+                <div id="serialArea" class="active" onclick="swapPage('serial')">
+                    <div id="serialBackground" class="active"></div>
+                    <div id="serialSlot1" class="serial-drop-area1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="serialSlot2" class="serial-drop-area2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div id="parallelArea" onclick="swapPage('parallel')">
+                    <div id="parallelBackground"></div>
+                    <div id="parallelSlot1" class="parallel-drop-area1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><div id="parallelSlot2" class="parallel-drop-area2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="slider-container">
+                    <div class="slider-item">
+                        <h2 style="color: blue;">V</h2>
+                        <label for="voltage-slider" style="color: blue;">voltage</label>
+                        <input type="range" id="voltage-slider" class="slider vertical" min="0" max="20" step="0.1" value="0" oninput="updateVoltageValue(this.value)">
+                        <p><span id="voltageSlider">0</span> V</p>
+                        <!-- <p id="voltageResult"></p> -->
+                    </div>
+                    <div class="slider-item">
+                        <h2 style="color: blue;">R</h2>
+                        <label for="resistance-slider" style="color: blue;">resistance</label>
+                        <input type="range" id="resistance-slider" class="slider vertical" min="0" max="100" step="1" value="0" oninput="updateResistanceValue(this.value)">
+                        <p><span id="resistanceSlider">0</span> Ω</p>
+                    </div>
+                </div>
+                <div class="hasil-arus">
+                    <p>Arus Terhitung: <span id="resultArus">0</span> A</p>
+                </div>                
+            </div>
+        </div>     
+    </main>
+
+    <footer>
+        <p>18222028 - Erwan Poltak Halomoan</p>
+        <p>2024.</p>
+    </footer>
+</body>
+</html>
