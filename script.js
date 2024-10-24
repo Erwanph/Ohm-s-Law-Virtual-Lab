@@ -95,10 +95,10 @@ function turnOffLightBulbs() {
 function calculateCurrent() {
     let totalResistance;
     if (isSerialSlotFilled1 && isSerialSlotFilled2) {
-        totalResistance = resistance * 2; // Series resistance
+        totalResistance = resistance * 2;
     } else if (isParallelSlotFilled1 && isParallelSlotFilled2) {
         if (resistance !== 0) {
-            totalResistance = 1 / ((1 / resistance) + (1 / resistance)); // Parallel resistance formula
+            totalResistance = 1 / ((1 / resistance) + (1 / resistance)); 
         } else {
             totalResistance = Infinity;
         }
@@ -165,7 +165,7 @@ function swapPage(clicked) {
         serialBackground.classList.add('active');
         parallelArea.classList.remove('active');
         parallelBackground.classList.remove('active');
-        clearParallelSlots(); // Clears only parallel slots
+        clearParallelSlots();
     } else if (clicked === 'parallel') {
         parallelBtn.classList.add('active');
         serialBtn.classList.remove('active');
@@ -173,11 +173,11 @@ function swapPage(clicked) {
         serialBackground.classList.remove('active');
         parallelArea.classList.add('active');
         parallelBackground.classList.add('active');
-        clearSerialSlots(); // Clears only serial slots
+        clearSerialSlots();
     }
     
     document.getElementById('switch').checked = false;
     isSwitchOn = false;
     turnOffLightBulbs();
-    document.getElementById("resultArus").textContent = "0"; // Reset the current display
+    document.getElementById("resultArus").textContent = "0";
 }
