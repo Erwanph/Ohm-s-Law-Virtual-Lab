@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #6A9C89;
+    background-image: url("../img/background1.avif");    height: 100vh;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -16,7 +16,7 @@ body {
 
 nav {
     height: 75px;
-    background-color: #16423C90;
+    background-color: #16423C;
     display: flex;
     align-items: center;
 }
@@ -161,9 +161,6 @@ footer p {
     font-size: 1.1em;
 }
 
-
-
-/* Ipad */
 @media (max-width: 1024px) {
     nav a {
         padding: 10px;

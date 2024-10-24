@@ -19,8 +19,8 @@
             <a href="simulation.html">Simulasi</a>
         </div>
         <div class="right-logo">
-            <a href="index.html">
-                <img src="../img/Logo.png" alt="Logo" width="60px">
+            <a href="https://itb.ac.id/">
+                <img src="../img/logoitb.png" alt="Logo" width="60px">
             </a>    
         </div>
     </nav>
@@ -34,7 +34,7 @@
             <div class="left-section">
                 <h1>Simulasi Rangkaian</h1>
                 <div class="item-table">
-                    <h2>Lorem Ipsum</h2>
+                    <h2>Pilih Resistor/Lampu</h2>
                     <div class="table-top">
                         <img src="../img/resistor.png" alt="Resistor" class="draggable" id="resistor" ondragstart="drag(event)">
                     </div>
@@ -56,7 +56,8 @@
                 </div>
                 <div id="parallelArea" onclick="swapPage('parallel')">
                     <div id="parallelBackground"></div>
-                    <div id="parallelSlot1" class="parallel-drop-area1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><div id="parallelSlot2" class="parallel-drop-area2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id="parallelSlot1" class="parallel-drop-area1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="parallelSlot2" class="parallel-drop-area2" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
                 </div>
             </div>
@@ -64,15 +65,15 @@
             <div class="right-section">
                 <div class="slider-container">
                     <div class="slider-item">
-                        <h2 style="color: blue;">V</h2>
-                        <label for="voltage-slider" style="color: blue;">voltage</label>
+                        <h2 style="color: #16423C;">V</h2>
+                        <label for="voltage-slider" style="color: #16423C;">Voltage <br>(Hanya pada Baterai)</label>
                         <input type="range" id="voltage-slider" class="slider vertical" min="0" max="20" step="0.1" value="0" oninput="updateVoltageValue(this.value)">
                         <p><span id="voltageSlider">0</span> V</p>
                         <!-- <p id="voltageResult"></p> -->
                     </div>
                     <div class="slider-item">
-                        <h2 style="color: blue;">R</h2>
-                        <label for="resistance-slider" style="color: blue;">resistance</label>
+                        <h2 style="color: #16423C;">R</h2>
+                        <label for="resistance-slider" style="color: #16423C;">Resistance (Masing - Masing Resistor/Lampu)</label>
                         <input type="range" id="resistance-slider" class="slider vertical" min="0" max="100" step="1" value="0" oninput="updateResistanceValue(this.value)">
                         <p><span id="resistanceSlider">0</span> Ω</p>
                     </div>
