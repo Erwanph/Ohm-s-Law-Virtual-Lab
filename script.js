@@ -5,7 +5,6 @@ let isSerialSlotFilled2 = false;
 let isParallelSlotFilled1 = false; 
 let isParallelSlotFilled2 = false; 
 let isSwitchOn = false;
-let state = false;
 
 function updateVoltageValue(val) {
     voltage = parseFloat(val);
@@ -71,15 +70,14 @@ function changeLightBulbImage(dropTarget, state) {
 }
 
 function checkConditionsAndToggleLight() {
-    if (resistance > 0 && voltage> 0 && isSwitchOn && voltage > 0 && resistance > 0) {
+    if (resistance > 0 && voltage> 0 && isSwitchOn && voltage > 0) {
         if ((isSerialSlotFilled1 && isSerialSlotFilled2) || (isParallelSlotFilled1 && isParallelSlotFilled2)) {
             const lightBulbContainers = document.querySelectorAll('.serial-drop-area1, .serial-drop-area2, .parallel-drop-area1, .parallel-drop-area2');
             lightBulbContainers.forEach(container => {
                 changeLightBulbImage(container, 'on');
             });
             calculateCurrent();
-        } 
-        else {
+        } else {
             turnOffLightBulbs();
         }
     } else {
@@ -97,10 +95,10 @@ function turnOffLightBulbs() {
 function calculateCurrent() {
     let totalResistance;
     if (isSerialSlotFilled1 && isSerialSlotFilled2) {
-        totalResistance = resistance * 2;
+        totalResistance = resistance * 2; 
     } else if (isParallelSlotFilled1 && isParallelSlotFilled2) {
         if (resistance !== 0) {
-            totalResistance = 1 / ((1 / resistance) + (1 / resistance)); 
+            totalResistance = 1 / ((1 / resistance) + (1 / resistance));
         } else {
             totalResistance = Infinity;
         }
@@ -167,7 +165,7 @@ function swapPage(clicked) {
         serialBackground.classList.add('active');
         parallelArea.classList.remove('active');
         parallelBackground.classList.remove('active');
-        clearParallelSlots();
+        clearParallelSlots(); 
     } else if (clicked === 'parallel') {
         parallelBtn.classList.add('active');
         serialBtn.classList.remove('active');
@@ -175,7 +173,7 @@ function swapPage(clicked) {
         serialBackground.classList.remove('active');
         parallelArea.classList.add('active');
         parallelBackground.classList.add('active');
-        clearSerialSlots();
+        clearSerialSlots(); 
     }
     
     document.getElementById('switch').checked = false;
