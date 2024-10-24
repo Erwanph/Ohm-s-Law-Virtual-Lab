@@ -70,7 +70,7 @@ function changeLightBulbImage(dropTarget, state) {
 }
 
 function checkConditionsAndToggleLight() {
-    if (resistance > 0 && voltage> 0 && isSwitchOn) {
+    if (resistance > 0 && voltage> 0 && isSwitchOn && voltage > 0) {
         if ((isSerialSlotFilled1 && isSerialSlotFilled2) || (isParallelSlotFilled1 && isParallelSlotFilled2)) {
             const lightBulbContainers = document.querySelectorAll('.serial-drop-area1, .serial-drop-area2, .parallel-drop-area1, .parallel-drop-area2');
             lightBulbContainers.forEach(container => {
