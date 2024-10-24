@@ -1,1 +1,2 @@
-# Ohm-s-Law-Virtual-Lab
+# Ohm's Law Virtual Lab (Bahasa Indonesia)
+
